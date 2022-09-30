@@ -1,4 +1,4 @@
 alias config='/usr/bin/git --git-dir=/Users/paulo/.cfg/ --work-tree=/Users/paulo'
 
 ## VSCode
-alias vscode='open -a Visual\ Studio\ Code.app
+alias vscode='open -a Visual\ Studio\ Code.app'
