@@ -2,14 +2,25 @@
 
 {
   programs.zsh.enable = true;
-  environment.shells = [ pkgs.bash pkgs.zsh ];
-  environment.loginShell = pkgs.zsh;
+  environment = {
+    shells = [ pkgs.bash pkgs.zsh ];
+    loginShell = pkgs.zsh;
+    systemPackages = [ pkgs.coreutils ];
+    systemPath = [ "/opt/homebrew/bin" ];
+    pathsToLink = [ "/Applications" ];
+  };
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
   services.nix-daemon.enable = true;
-  system.defaults.finder.AppleShowAllExtensions = true;
-  system.defaults.finder._FXShowPosixPathInTitle = true;
+  fonts ={
+    fontDir.enable = true;
+  };
+  system.defaults = {
+    finder.AppleShowAllExtensions = true;
+    finder._FXShowPosixPathInTitle = true;
+    dock.autohide = true;
+  };
   # Homebrew
   homebrew = {
     enable = true;
