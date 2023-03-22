@@ -12,11 +12,14 @@
   system.defaults.finder._FXShowPosixPathInTitle = true;
   # Homebrew
   homebrew = {
-  enable = true;
-  caskArgs.no_quarantine = true;
-  global.brewfile = true;
-  masApps = { };
-  casks = [ "raycast" ];
+    enable = true;
+    caskArgs.no_quarantine = true;
+    global.brewfile = true;
+    masApps = { };
+    casks = [ 
+      "raycast"
+      "docker"
+    ];
   };
 }
 
