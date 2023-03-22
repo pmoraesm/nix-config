@@ -10,5 +10,13 @@
   services.nix-daemon.enable = true;
   system.defaults.finder.AppleShowAllExtensions = true;
   system.defaults.finder._FXShowPosixPathInTitle = true;
+  # Homebrew
+  homebrew = {
+  enable = true;
+  caskArgs.no_quarantine = true;
+  global.brewfile = true;
+  masApps = { };
+  casks = [ "raycast" ];
+  };
 }
 

@@ -1,5 +1,5 @@
 {
-  description = "My initial flake";
+  description = "Paulo's MacOS Flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -20,9 +20,12 @@
         pkgs = import nixpkgs { system = "aarch64-darwin"; };
         modules = [ 
           ./modules/darwin
+          # Needed this to fix conflicting homeDirectory issue
           {
             users.users.paulo.home = "/Users/paulo";
           }
+          
+          # Home-Manager
           home-manager.darwinModules.home-manager
           {
             home-manager = {

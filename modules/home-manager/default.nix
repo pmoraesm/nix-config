@@ -18,4 +18,35 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Packages
+  home.packages = [
+    pkgs.iterm2
+  ];
+
+  # Git
+  programs.git = {
+    enable = true;
+    userName  = "Paulo";
+    userEmail = "pm85@proton.me";
+    ignores = [
+      ".vscode"
+      ".venv"
+      ".DS_Store"
+    ];
+  };
+
+  # ZSH
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    shellAliases = {
+      ls = "ls --color=auto -F";
+      nixswitch = "darwin-rebuild switch --flake ~/.config/.#";
+      nixup = "pushd ~/.config; nix flake update; nixswitch; popd";
+      code = "open -a Visual\\ Studio\\ Code.app";
+    };
+  };
 }
