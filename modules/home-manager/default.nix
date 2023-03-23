@@ -20,9 +20,9 @@
   programs.home-manager.enable = true;
 
   # Packages
-  home.packages = [
-    pkgs.nerdfonts
-    pkgs.alacritty
+  home.packages = with pkgs; [
+    nerdfonts
+    iterm2
   ];
 
   # Git
@@ -49,12 +49,5 @@
       nixup = "pushd ~/.config; nix flake update; nixswitch; popd";
       code = "open -a Visual\\ Studio\\ Code.app";
     };
-  };
-
-  #Alacritty
-  programs.alacritty = {
-    enable = true;
-    settings.font.normal.family = "MesloLGL Nerd Font Mono";
-    settings.font.size = 14;
   };
 }
