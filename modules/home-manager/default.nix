@@ -23,6 +23,7 @@
   home.packages = with pkgs; [
     nerdfonts
     iterm2
+    zsh-git-prompt
   ];
 
   # Git
@@ -40,6 +41,16 @@
   # ZSH
   programs.zsh = {
     enable = true;
+    initExtra = ''
+      ## Git branch
+      autoload -Uz vcs_info
+      precmd() { vcs_info }
+      zstyle ':vcs_info:*' formats ' (%F{green}%b%f)'
+
+      ## Show current dir
+      setopt prompt_subst
+      PS1='%n@%m %~ $vcs_info_msg_0_ %# '
+    '';
     enableCompletion = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
