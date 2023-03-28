@@ -17,7 +17,9 @@
     fontDir.enable = true;
   };
   system.defaults = {
+    finder.AppleShowAllFiles = true;
     finder.AppleShowAllExtensions = true;
+    finder.FXPreferredViewStyle = "clmv"; # "icnv" = Icon view, "Nlsv" = List view, "clmv" = Column View, "Flwv" = Gallery View
     finder._FXShowPosixPathInTitle = true;
     dock.autohide = true;
   };
