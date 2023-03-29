@@ -24,7 +24,6 @@
     nerdfonts
     iterm2
     vscode
-    #vscode-extensions
     zsh-git-prompt
   ];
 
@@ -69,7 +68,10 @@
     enable = true;
     mutableExtensionsDir = true;
     extensions = with pkgs.vscode-extensions; [
+      ms-azuretools.vscode-docker
+      ms-python.python
       eamodio.gitlens
+      benoist.nix
     ];
   };
 }
