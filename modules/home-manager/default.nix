@@ -23,6 +23,8 @@
   home.packages = with pkgs; [
     nerdfonts
     iterm2
+    vscode
+    #vscode-extensions
     zsh-git-prompt
   ];
 
@@ -60,5 +62,14 @@
       nixup = "pushd ~/.config; nix flake update; nixswitch; popd";
       code = "open -a Visual\\ Studio\\ Code.app";
     };
+  };
+
+  # VSCode
+  programs.vscode = {
+    enable = true;
+    mutableExtensionsDir = true;
+    extensions = with pkgs.vscode-extensions; [
+      eamodio.gitlens
+    ];
   };
 }

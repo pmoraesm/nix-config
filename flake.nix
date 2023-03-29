@@ -2,7 +2,9 @@
   description = "Paulo's MacOS Flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs = { 
+      url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +19,10 @@
     darwinConfigurations.paulo-mbp2021 = 
       darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        pkgs = import nixpkgs { system = "aarch64-darwin"; };
+        pkgs = import nixpkgs { 
+          system = "aarch64-darwin";
+          config = { allowUnfree = true; };
+        };
         modules = [ 
           ./modules/darwin
           # Needed this to fix conflicting homeDirectory issue
