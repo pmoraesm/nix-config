@@ -71,7 +71,7 @@
       ms-azuretools.vscode-docker
       ms-python.python
       eamodio.gitlens
-      benoist.nix
+      bbenoist.nix
     ];
   };
 }
