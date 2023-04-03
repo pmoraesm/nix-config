@@ -25,6 +25,7 @@
     iterm2
     vscode
     zsh-git-prompt
+    rectangle
   ];
 
   # Git
