@@ -75,6 +75,7 @@
       ms-python.python
       eamodio.gitlens
       bbenoist.nix
+      njpwerner.autodocstring
     ];
   };
 }
