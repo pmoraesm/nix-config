@@ -26,6 +26,8 @@
     vscode
     zsh-git-prompt
     rectangle
+    whois
+    jq
   ];
 
   # Git
