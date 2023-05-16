@@ -28,6 +28,7 @@
     rectangle
     whois
     jq
+    poetry
   ];
 
   # Git
