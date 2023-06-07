@@ -32,6 +32,8 @@
     casks = [ 
       "raycast"
       "docker"
+      "maccy"
+      "rocket-typist"
     ];
   };
 }

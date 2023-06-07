@@ -29,6 +29,9 @@
     whois
     jq
     poetry
+    azure-cli
+    kubectl
+    kubernetes-helm
   ];
 
   # Git
@@ -77,6 +80,7 @@
       eamodio.gitlens
       bbenoist.nix
       njpwerner.autodocstring
+      ms-toolsai.jupyter
     ];
   };
 }
