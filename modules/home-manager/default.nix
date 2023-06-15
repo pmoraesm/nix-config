@@ -30,8 +30,7 @@
     jq
     poetry
     azure-cli
-    kubectl
-    kubernetes-helm
+    terraform
   ];
 
   # Git
@@ -58,6 +57,12 @@
       ## Show current dir
       setopt prompt_subst
       PS1='%n@%m %~ $vcs_info_msg_0_ %# '
+
+      # The next line updates PATH for the Google Cloud SDK.
+      if [ -f '/Users/paulo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/paulo/google-cloud-sdk/path.zsh.inc'; fi
+
+      # The next line enables shell command completion for gcloud.
+      if [ -f '/Users/paulo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/paulo/google-cloud-sdk/completion.zsh.inc'; fi
     '';
     enableCompletion = true;
     enableAutosuggestions = true;
