@@ -29,11 +29,15 @@
     caskArgs.no_quarantine = true;
     global.brewfile = true;
     masApps = { };
+    taps = [ 
+      "microsoft/git"
+    ];
     casks = [ 
       "raycast"
       "docker"
       "maccy"
       "rocket-typist"
+      "git-credential-manager-core"
     ];
   };
 }
