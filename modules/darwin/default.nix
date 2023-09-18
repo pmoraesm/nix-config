@@ -41,6 +41,7 @@
       "maccy"
       "rocket-typist"
       "git-credential-manager-core"
+      "spotify"
     ];
   };
 }
