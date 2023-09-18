@@ -32,6 +32,9 @@
     taps = [ 
       "microsoft/git"
     ];
+    brews = [
+      "gh"
+    ];
     casks = [ 
       "raycast"
       "docker"

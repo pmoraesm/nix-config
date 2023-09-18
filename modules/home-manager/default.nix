@@ -28,9 +28,11 @@
     rectangle
     whois
     jq
+    jdk11
     poetry
     azure-cli
     terraform
+    ffmpeg
   ];
 
   # Git
@@ -42,6 +44,7 @@
       ".vscode"
       ".venv"
       ".DS_Store"
+      ".terraform"
     ];
   };
 
