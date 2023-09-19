@@ -34,6 +34,7 @@
     terraform
     ffmpeg
     spotify
+    raycast
   ];
 
   # Git

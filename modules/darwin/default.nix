@@ -29,14 +29,10 @@
     caskArgs.no_quarantine = true;
     global.brewfile = true;
     masApps = { };
-    taps = [ 
+    taps = [
       "microsoft/git"
     ];
-    brews = [
-      "gh"
-    ];
-    casks = [ 
-      "raycast"
+    casks = [
       "docker"
       "maccy"
       "rocket-typist"
